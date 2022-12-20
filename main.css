@@ -4,7 +4,7 @@
     box-sizing: border-box;
     color: white;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 body,html{
     height: 100%;
@@ -113,6 +113,7 @@ option{
 .deposit{
     margin-top: 20px;
     margin-left: 18px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
