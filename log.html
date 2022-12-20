@@ -59,7 +59,7 @@
       for (let i = 0; i < number.length; i++) {
         number[i].addEventListener("click", function () {
           circle[count++].style.backgroundColor = "white";
-          if (count == 6) {
+          if (count >= 6) {
             location.href = "main.html";
           }
         });
