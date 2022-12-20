@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="log.css" />
     <link rel="stylesheet" href="font.css" />
     <title>윤성은행</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </head>
   <body>
     <div id="input_form">
@@ -21,7 +24,7 @@
         <div class="circle" style="margin-right: 30px"></div>
       </div>
     </div>
-    <div id="password_pad">
+    <div id="password_pad" style="">
       <div class="pad">
         <button class="pad_num">1</button>
         <button class="pad_num">2</button>
@@ -44,6 +47,8 @@
       </div>
     </div>
 
+    <button onclick="openFullScreenMode()" style="color: white; font-size: 10px;text-decoration: underline;">전체화면</button>
+
     <script>
         const number = document.getElementsByClassName('pad_num');
         const circle = document.getElementsByClassName('circle');
@@ -60,5 +65,38 @@
         }
 
     </script>
+
+     <script>
+
+    
+      var doc = document.documentElement;
+// 전체화면 설정
+function openFullScreenMode() {
+  if (doc.requestFullscreen)
+      doc.requestFullscreen();
+  else if (doc.webkitRequestFullscreen) // Chrome, Safari (webkit)
+      doc.webkitRequestFullscreen();
+  else if (doc.mozRequestFullScreen) // Firefox
+      doc.mozRequestFullScreen();
+  else if (doc.msRequestFullscreen) // IE or Edge
+      doc.msRequestFullscreen();
+  $('.fullscreen').hide();
+  $('.close-fullscreen').show();
+}
+// 전체화면 해제
+function closeFullScreenMode() {
+  if (document.exitFullscreen)
+      document.exitFullscreen();
+  else if (document.webkitExitFullscreen) // Chrome, Safari (webkit)
+      document.webkitExitFullscreen();
+  else if (document.mozCancelFullScreen) // Firefox
+      document.mozCancelFullScreen();
+  else if (document.msExitFullscreen) // IE or Edge
+      document.msExitFullscreen();
+  $('.fullscreen').show();
+  $('.close-fullscreen').hide();
+}
+
+  </script>
   </body>
 </html>
