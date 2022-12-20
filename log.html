@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="log.css" />
+    <link rel="stylesheet" href="font.css" />
+    <title>윤성은행</title>
+  </head>
+  <body>
+    <div id="input_form">
+      <h1>비밀번호를 눌러주세요</h1>
+
+      <div id="password">
+        <div class="circle" style="margin-left: 30px"></div>
+        <div class="circle"><input type="hidden" /></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle" style="margin-right: 30px"></div>
+      </div>
+    </div>
+    <div id="password_pad">
+      <div class="pad">
+        <button class="pad_num">1</button>
+        <button class="pad_num">2</button>
+        <button class="pad_num">3</button>
+      </div>
+      <div class="pad">
+        <button class="pad_num">4</button>
+        <button class="pad_num">5</button>
+        <button class="pad_num">6</button>
+      </div>
+      <div class="pad">
+        <button class="pad_num">7</button>
+        <button class="pad_num">8</button>
+        <button class="pad_num">9</button>
+      </div>
+      <div class="pad">
+        <button class="pad_num">*</button>
+        <button class="pad_num">0</button>
+        <button class="pad_num">#</button>
+      </div>
+    </div>
+
+    <script>
+        const number = document.getElementsByClassName('pad_num');
+        const circle = document.getElementsByClassName('circle');
+        let count = 0;
+        for(let i=0;i<number.length;i++)
+        {
+            number[i].addEventListener('click',function(){
+                circle[count++].style.backgroundColor = 'white';
+                if(count ==6){
+                    location.href="main.html"
+                }
+            })
+            
+        }
+
+    </script>
+  </body>
+</html>

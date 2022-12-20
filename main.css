@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    background-color: #18171E;
+}
+img{
+    width: 20px;
+    height: auto;
+}
+#top{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'LINESeedKR-Bd';
+    font-weight: 100;
+}
+#money_form{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+#money_form h3{
+    font-size: 16px;
+    font-weight: 100;
+    text-decoration: underline;
+    color: #E2E2E4;
+}
+#m{
+    font-size: 35px;
+    font-family: 'Happiness-Sans-Title';
+}
+#y{
+    font-size: 35px;
+    font-weight: 800;
+}
+#box_list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+#box{
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+
+}
+#box:first-child{
+    background-color: #2C2C35;
+    color: #3F81E2;
+}
+#box:last-child{
+    margin-left: 0px;
+    background-color: #3182F5;
+}
+select{
+ 
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+select:focus{
+    outline: none;
+}
+option{
+    margin-top: 30px;
+    background-color: transparent;
+    font-size: 10px;
+    font-weight: 100;
+    color: #E2E2E4;
+    
+}
+
+#middle_list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-right: 18px;
+    margin-left: 18px;
+}
+#middle_re{
+    color: #E2E2E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deposit{
+    margin-top: 20px;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#profile_circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}

@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.815);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    justify-content: space-around;
+}
+#password{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#input_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+}
+#input_form h1{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: white;
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(57, 56, 56);
+    border: 2px solid rgb(57, 56, 56);
+    margin-left: 20px;
+}
+#password_pad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.pad{
+    display: flex;
+    font-size: 40px;
+    margin-left: -70px;
+}
+
+.pad_num{
+    margin-left: 70px;
+    color: white;
+    outline:none;
+}
+button{
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color:transparent;
+    outline:none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 40px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="font.css" />
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>계좌 잔액</title>
+  </head>
+  <body>
+    <div id="top">
+      <span><img src="arrow.png" /></span>
+      <span>KB able Plus통장</span>
+      <span>관리</span>
+    </div>
+    <div id="money_form">
+      <h3>KB국민은행 123456789011122</h3>
+      <div id="money">
+        <span id="m" class="memberCountCon"></span>
+        <span id="y">원</span>
+      </div>
+    </div>
+    <div id="box_list">
+      <div id="box">채우기</div>
+      <div id="box">보내기</div>
+    </div>
+
+    <div id="middle_list">
+      <select name="" id="">
+        <option value="" selected>전체</option>
+        <option value="">입금</option>
+        <option value="">예금</option>
+        <option value="">적금</option>
+      </select>
+      <div id="middle_re">
+        <span style="margin-right: 10px; color: #e2e2e4c0">방금 전</span>
+        <span><img src="return.png" style="width: 25px" height="auto" /></span>
+      </div>
+    </div>
+
+    <div class="deposit">
+      <h4 style="font-weight: 500; color: #e2e2e4c0; margin-bottom: 15px">
+        12월13일
+      </h4>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center; ">
+          <img src="profile.jpg" id="profile_circle" />
+          <div style="display: flex; flex-direction: column; margin-left: 20px;">
+          <span style="font-size: 21px;"> 전해성 </span>
+          <span style="color: #e2e2e4b5;"> 12:08 </span>
+        </div>
+        </div>
+
+
+        <div style="display: flex; flex-direction: column; align-items: flex-end; margin-right: 20px;">
+          <span style="font-size: 21px; color: #447FDF; font-family: 'Happiness-Sans-Title';"> 8,000,000원 </span>
+          <span style="color: #727178;"> 68,000,000원 </span>
+      </div>
+    </div>
+
+    <script>
+      var memberCountConTxt = 68000000;
+
+      $({ val: 0 }).animate(
+        { val: memberCountConTxt },
+        {
+          duration: 1000,
+          step: function () {
+            var num = numberWithCommas(Math.floor(this.val));
+            $(".memberCountCon").text(num);
+          },
+          complete: function () {
+            var num = numberWithCommas(Math.floor(this.val));
+            $(".memberCountCon").text(num);
+          },
+        }
+      );
+
+      //3자리마다 , 찍기
+      function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+    </script>
+  </body>
+</html>
