@@ -52,7 +52,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 .pad{
     display: flex;
